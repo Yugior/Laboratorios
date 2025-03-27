@@ -79,12 +79,7 @@
                 <a href = "https://www.youtube.com/watch?v=U8BlNEKq0r8">
                     <img src = "https://i.pinimg.com/originals/53/4e/19/534e19ce40b830a8c4bad2d7b08d4526.gif" alt = "Mi Requiem" width="600" height="600">
                 </a>
-            </p>
-            <h3>Califica la página del 1 al 10</h3>
-            <label for="rating">1</label>
-            <input type="range" id="rating" name="rating" min="1" max="10" value="5" oninput="document.getElementById('ratingValue').textContent = this.value;">
-            <label for="rating">10</label>
-            <span id="ratingValue">5</span>
+          
             
             <br>
             
@@ -147,6 +142,67 @@
         </header>
 
         <header>
+            <h2>Preguntas del Laboratorio 2</h2>
+    
+            <section>
+                <h3>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</h3>
+                <p>El uso de <code>!important</code> en CSS debe ser limitado y justificado, ya que anula la especificidad normal de los estilos y puede dificultar el mantenimiento del código. Se recomienda solo en casos específicos, como cuando se necesita sobrescribir estilos de terceros o corregir errores urgentes. Lo ideal es estructurar bien las reglas CSS para evitar depender de <code>!important</code>.</p>
+            </section>
+            
+            <section>
+                <h3>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</h3>
+                <ul>
+                    <li><strong>Legibilidad:</strong> No debe afectar la visibilidad del texto ni generar un contraste deficiente.</li>
+                    <li><strong>Rendimiento:</strong> Imágenes pesadas pueden ralentizar la carga de la página.</li>
+                    <li><strong>Compatibilidad:</strong> Debe ajustarse correctamente en diferentes dispositivos y tamaños de pantalla (usar <code>background-size: cover;</code>).</li>
+                    <li><strong>Accesibilidad:</strong> No debe ser el único medio para transmitir información importante.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h3>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de una propiedad de estilo entre %, px y pt?</h3>
+                <ul>
+                    <li><strong>% (porcentajes):</strong> Se recomienda para diseños responsivos, ya que permite adaptar el tamaño en función del contenedor.</li>
+                    <li><strong>px (píxeles):</strong> Útil cuando se requiere un tamaño fijo, pero puede no adaptarse bien en pantallas de diferentes resoluciones.</li>
+                    <li><strong>pt (puntos):</strong> Más usado en impresión, no recomendado para pantallas porque no escala bien con diferentes resoluciones.</li>
+                </ul>
+                <p>Lo ideal es usar unidades relativas como <code>%</code>, <code>em</code>, <code>rem</code> o <code>vw/vh</code> para garantizar flexibilidad en el diseño.</p>
+            </section>
+            
+            <section>
+                <h3>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3>
+                <p>La versión minimizada de un CSS elimina espacios, comentarios y caracteres innecesarios, reduciendo el tamaño del archivo. Esto mejora el rendimiento porque:</p>
+                <ul>
+                    <li><strong>Carga más rápida:</strong> Reduce el tiempo de descarga y renderizado.</li>
+                    <li><strong>Menos uso de ancho de banda:</strong> Beneficia a usuarios con conexiones lentas.</li>
+                    <li><strong>Mejor caché y rendimiento en servidores:</strong> Archivos más pequeños son más eficientes en almacenamiento y distribución.</li>
+                </ul>
+                <p>Siempre es recomendable usar CSS minimizado en producción y mantener una versión legible para desarrollo.</p>
+            </section>
+            
+
+            <h1>Ejercicios de JavaScript</h1>
+    
+    <!-- Botones para ejecutar las funciones -->
+<button onclick="tablaCuadradosCubos()">Ejercicio 1: Tabla de cuadrados y cubos</button>
+<button onclick="sumaAleatoria()">Ejercicio 2: Suma Aleatoria</button>
+<button onclick="contador()">Ejercicio 3: Contador de valores</button>
+<button onclick="promedios()">Ejercicio 4: Promedios</button>
+<button onclick="inverso()">Ejercicio 5: Inverso</button>
+<button onclick="mostrarPersona()">Ejercicio 6: Objeto Persona</button>
+    
+    
+    <div id="output"></div> <!-- Aquí se mostrarán los resultados -->
+
+    <script src="script.js"></script> <!-- Se carga el script después del HTML -->
+
+        </body>
+        </html>
+        
+            </header>
+        </header>
+
+        <header>
             <h2>Referencias</h2>
             <ul>
                 <li><a href="https://www.bbc.com/mundo/noticias-47538812#:~:text=Internet%20es%20una%20inmensa%20red,para%20acceder%20a%20la%20web." target="_blank">¿Cuál es la diferencia entre internet y la web? (y por qué muchos las confunden)</a></li>
@@ -157,6 +213,5 @@
             </ul>
         </header>
 
-       
 
 </html>
