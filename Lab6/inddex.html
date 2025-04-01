@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Contraseñas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="title" class="mb-4 text-center">Validador de Contraseñas</h2>
+        <form>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" id="password" class="form-control" required>
+                <div id="passwordHelp" class="form-text">Debe contener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.</div>
+                <div id="strengthMessage" class="mt-2"></div>
+                <div id="infoBox" class="mt-2 text-info" style="display: none;"></div>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                <input type="password" id="confirmPassword" class="form-control" required>
+                <div id="confirmMessage" class="mt-2"></div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Validar</button>
+        </form>
+        
+        <div class="mt-4">
+            <h3>Preguntas del laboratorio</h3>
+            <p><strong>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</strong></p>
+            <p>Porque permite una validación rápida en el lado del cliente, mejorando la experiencia del usuario y reduciendo la carga del servidor.</p>
+            
+            <p><strong>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong></p>
+            <p>Se puede deshabilitar JavaScript en el navegador o manipular los datos enviados mediante herramientas como el inspector de elementos o programas como Postman.</p>
+            
+            <p><strong>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong></p>
+            <p>Porque aunque no sustituye la validación en el servidor, mejora la usabilidad y previene errores antes de que los datos sean enviados.</p>
+        </div>
+        
+        <div class="mt-4">
+            <h3>Fuentes consultadas</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/js/js_validation.asp" target="_blank">Validación en JavaScript - W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation" target="_blank">Validación de formularios - MDN</a></li>
+                <li><a href="https://www.w3schools.com/html/html5_draganddrop.asp" target="_blank">Drag and Drop - W3Schools</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Sección de imagen -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <a href="https://www.youtube.com/watch?v=j-RpvIuazmc" target="_blank">
+            <img src="https://www.icegif.com/wp-content/uploads/2022/07/icegif-943.gif" alt="Requiem1" width="200" height="200">
+        </a>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
