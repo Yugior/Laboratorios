@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Videojuegos</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Lista de videojuegos</h1>
+  <ul>
+    <% if (videojuegos.length > 0) { %>
+      <% videojuegos.forEach(juego => { %>
+        <li><strong><%= juego.nombre %></strong> — <%= juego.plataforma %> — <%= juego.genero %></li>
+      <% }) %>
+    <% } else { %>
+      <li>No hay videojuegos aún.</li>
+    <% } %>
+  </ul>
+  <a href="/add">Agregar otro videojuego</a>
+
+  <hr>
+
+  <section>
+    <h2>Preguntas de laboratorio</h2>
+
+    <h3>¿Qué beneficios encuentras en el estilo MVC?</h3>
+    <p>
+      El patrón MVC separa claramente la lógica del negocio (Modelo), la lógica de presentación (Vista) y la lógica de control (Controlador).
+       Esto facilita el mantenimiento, permite trabajar en equipo más eficientemente, mejora la organización del código y lo hace más escalable y reutilizable.
+    </p>
+
+    <h3>¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</h3>
+    <p>
+      Sí. Una desventaja es que para proyectos pequeños puede parecer demasiado complejo o "sobrecargado" al tener que crear varias carpetas y archivos. 
+      Además, puede haber una curva de aprendizaje inicial al entender cómo se relacionan las capas entre sí.
+    </p>
+  </section>
+
+    
+</body>
+</html>
