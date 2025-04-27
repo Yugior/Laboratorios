@@ -1,0 +1,24 @@
+.animated-button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-button:hover {
+    transform: scale(1.1);
+    background-color: #17a2b8; /* Un color diferente en hover */
+    color: white;
+}
+
+.animated-text {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
