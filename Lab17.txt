@@ -1,0 +1,61 @@
+Ventajas de escribir SQL únicamente en la capa del modelo:
+Separación de responsabilidades:
+
+La capa modelo se encarga de la lógica de negocio y el acceso a datos, mientras que las demás capas (vista y controlador) manejan la presentación y la interacción. Esto mejora la organización y mantenibilidad del código.
+
+Seguridad:
+
+Centralizar las consultas SQL en el modelo permite un mejor control de las validaciones y evita que consultas maliciosas o inseguras se ejecuten desde otras partes del sistema.
+
+Reusabilidad:
+
+Las consultas SQL pueden ser reutilizadas en diferentes partes de la aplicación sin duplicar código.
+
+Facilidad de mantenimiento:
+
+Si hay cambios en la estructura de la base de datos, solo se deben modificar las consultas en el modelo, no en múltiples archivos.
+
+Prevención de errores:
+
+Al evitar que SQL se mezcle con la lógica de presentación o control, se reduce el riesgo de errores y vulnerabilidades.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+SQL Injection y cómo prevenirlo
+¿Qué es SQL Injection?
+Es un ataque donde un hacker inserta código SQL malicioso en una consulta, aprovechando vulnerabilidades en la validación de entradas. Esto puede permitir:
+
+Acceso no autorizado a datos.
+
+Eliminación o modificación de registros.
+
+Ejecución de comandos peligrosos en el servidor.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Cómo prevenir SQL Injection:
+Usar consultas parametrizadas (Prepared Statements):
+
+Las bibliotecas de acceso a datos (como PDO en PHP o SQLAlchemy en Python) permiten separar los parámetros de la consulta SQL.
+
+
+Herramientas como Hibernate (Java), Entity Framework (C#) o Django ORM (Python) generan SQL automáticamente, evitando la escritura manual de consultas.
+
+Validar y sanitizar entradas:
+
+Filtrar caracteres peligrosos (como comillas o ;) usando funciones como mysqli_real_escape_string() (aunque no es suficiente por sí solo).
+
+Principio de mínimo privilegio:
+
+La cuenta de la base de datos usada por la aplicación debe tener solo los permisos necesarios (ej: no permitir DROP TABLE).
+
+Usar stored procedures (con cuidado):
+
+Las consultas se definen en la base de datos y se llaman con parámetros, pero deben evitarse si se concatenan inputs directamente.
+
+Escapar caracteres especiales:
+
+En casos donde no se puedan usar prepared statements, aplicar funciones de escape según el motor de la base de datos.
+
+Configurar el sistema correctamente:
+
+Deshabilitar mensajes de error detallados que expongan la estructura de la base de datos.
