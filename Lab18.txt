@@ -1,0 +1,43 @@
+Lab18preg
+
+Existen diversas formas de autenticacion
+
+1. Autentificación por token (JWT - JSON Web Tokens)
+En lugar de sesiones del lado del servidor, se usa un token firmado que el servidor genera y el cliente almacena (por ejemplo, en localStorage) y envía en cada petición.
+
+-Es común en APIs y aplicaciones SPA (Single Page Applications).
+
+-No requiere mantener estado en el servidor.
+
+ 2. Autentificación multifactor (MFA - Multi-Factor Authentication)
+Combina dos o más métodos de autenticación:
+
+-Algo que sabes (contraseña).
+
+-Algo que tienes (código de SMS, app como Google Authenticator).
+
+-Algo que eres (huella digital, reconocimiento facial).
+
+ 3. Autentificación basada en OAuth
+-Utilizada para permitir que los usuarios inicien sesión con cuentas de terceros como Google, Facebook, GitHub, etc.
+
+-Protocolo que otorga acceso limitado a aplicaciones de terceros sin compartir la contraseña del usuario.
+
+-Muy útil para evitar gestionar contraseñas directamente.
+
+ 4. Autentificación basada en certificados digitales
+-Común en aplicaciones empresariales o gubernamentales.
+
+-Usa certificados criptográficos instalados en el dispositivo del usuario para verificar identidad.
+
+ 5. Autentificación biométrica
+-Utiliza características físicas del usuario como huellas dactilares, reconocimiento facial, iris, voz, etc.
+
+-Común en dispositivos móviles.
+
+ 6. Magic Links o código de un solo uso (OTP)
+-El usuario introduce su email y recibe un enlace o código temporal para acceder.
+
+-No requiere contraseña.
+
+-Mejora la experiencia del usuario y reduce riesgo de filtración de contraseñas.
