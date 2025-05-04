@@ -1,0 +1,36 @@
+
+Laboratorio 19
+
+¿En qué consiste el control de acceso basado en roles (RBAC)?
+
+El control de acceso basado en roles (RBAC) es un modelo de seguridad que restringe el acceso a recursos del sistema en función de los roles asignados a los usuarios. En vez de asignar permisos directamente a cada usuario, se definen roles (como "Administrador", "Editor", "Cliente", etc.) con un conjunto específico de permisos, y luego se asignan estos roles a los usuarios.
+
+Principales características del modelo RBAC:
+- Separación de funciones: Permite limitar las acciones que un usuario puede realizar según su rol.
+- Facilidad de administración: Cambiar permisos a muchos usuarios es tan fácil como modificar un rol.
+- Escalabilidad: Es más eficiente que el control por usuario individual, especialmente en sistemas grandes.
+
+¿Qué capacidades le puede dar a una aplicación la implementación de este modelo de datos con respecto al control de acceso?
+
+La implementación del modelo RBAC otorga a una aplicación las siguientes capacidades:
+
+- Seguridad granular: Permite definir exactamente qué puede hacer cada tipo de usuario.
+- Gestión centralizada de permisos: Se puede modificar el acceso de varios usuarios ajustando un único rol.
+- Interfaz personalizada: La aplicación puede mostrar o esconder funcionalidades según los permisos del usuario.
+- Prevención de accesos indebidos: Al validar roles y permisos en cada ruta, se evita que usuarios sin autorización accedan a recursos sensibles.
+- Auditoría más sencilla: Es más fácil rastrear y justificar los accesos en el sistema.
+- Escalabilidad en administración de usuarios: Se adapta bien a sistemas con muchos usuarios y roles diferenciados.
+
+Comparación de dos sistemas: uno que aplica RBAC y otro que no
+
+
+| Característica         | Sistema que aplica RBAC                        | Sistema que NO aplica RBAC                    |
+|------------------------|-----------------------------------------------|-----------------------------------------------|
+| Ejemplo                | CMS como WordPress con plugins de roles       | Sitio básico en PHP sin control de roles      |
+| Ventajas               | - Permite delegar tareas con seguridad        | - Simple de implementar en sistemas pequeños  |
+|                        | - Fácil de escalar                            | - Menos sobrecarga inicial de desarrollo      |
+|                        | - Permisos se actualizan desde los roles      |                                               |
+| Desventajas            | - Requiere diseño previo de roles y permisos  | - Difícil de mantener                          |
+|                        | - Puede ser complejo al principio             | - Cambiar permisos implica revisar código     |
+| Gestión de permisos    | Centralizada mediante roles y grupos          | Directamente por usuario                      |
+| Escalabilidad          | Alta                                           | Baja                                           |
