@@ -1,0 +1,123 @@
+/* Fuente moderna y colores suaves */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Formulario */
+form {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+  margin-bottom: 2rem;
+}
+
+form input[type="number"],
+form input[type="text"] {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Botón adicional */
+#updateProducts {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+#updateProducts:hover {
+  background-color: #27ae60;
+}
+
+/* Código de resultado */
+#codeResult {
+  display: block;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  max-width: 700px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de productos */
+#productos-container,
+#wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+#ajax-info {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+#ajax-info h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.qa {
+  margin-bottom: 1.5rem;
+}
+
+.qa h3 {
+  color: #2980b9;
+  margin-bottom: 0.5rem;
+}
+
+.qa p {
+  line-height: 1.6;
+  color: #555;
+}
