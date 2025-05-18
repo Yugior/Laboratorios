@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>AJAX Consumption</title>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+
+
+  </head>
+  <body>
+    <h1>AJAX consumption</h1>
+
+    <div id="productos-container"></div>
+
+    <h2>Save Product</h2>
+
+    <form id="myForm">
+      <input type="number" id="id" name="id" placeholder="Id"></input>
+      <input type="text" id="name" name="name" placeholder="Name"></input>
+      <input type="number" id="price" name="price" step="any" placeholder="Price"></input>
+      <input type="submit" id="submitButton"></input>
+    </form>
+    <button id="updateProducts">Update Products</button>
+    <code id="codeResult"></code>
+    <div id="wrapper"></div>
+
+    <section id="ajax-info">
+  <h2>Preguntas frecuentes sobre AJAX</h2>
+
+  <div class="qa">
+    <h3>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?</h3>
+    <p>
+      AJAX permite que las aplicaciones web interactúen con el servidor de forma asíncrona sin necesidad de recargar la página completa.
+      Esto mejora significativamente la experiencia del usuario, permitiendo interfaces más dinámicas, rápidas y similares a una aplicación de escritorio,
+      lo cual es esencial en las RIA.
+    </p>
+  </div>
+
+  <div class="qa">
+    <h3>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad?</h3>
+    <p>
+      AJAX puede exponer ciertos puntos vulnerables si no se manejan correctamente, como la manipulación de datos por parte del usuario o ataques como XSS y CSRF.
+      Por eso, todas las validaciones críticas deben hacerse **del lado del servidor**, ya que el cliente puede ser manipulado.
+      Las validaciones del lado del cliente sirven solo para mejorar la experiencia del usuario, pero **no son seguras por sí solas**.
+    </p>
+  </div>
+
+  <div class="qa">
+    <h3>¿Qué es JSON?</h3>
+    <p>
+      JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos. Es fácil de leer y escribir para los humanos, y fácil de parsear y generar por las máquinas.
+      Se utiliza comúnmente en aplicaciones web para enviar y recibir datos entre el cliente y el servidor.
+    </p>
+  </div>
+</section>
+
+  </body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+</html>
