@@ -1,0 +1,52 @@
+# 1. Crear juego nuevo
+ GET http://localhost:3000/game/create
+
+# 2. Lanzar dado para ver quién empieza
+ GET http://localhost:3000/game/dice
+
+# 3. Colocar barcos jugador 1
+POST http://localhost:3000/game/create/1 
+
+# 4. Colocar barcos jugador 2
+POST http://localhost:3000/game/create/2 
+
+
+# 5. Consultar estado del juego
+ GET http://localhost:3000/game/status
+
+# 6. Ataque del jugador 1 a (0,0)
+POST http://localhost:3000/game/turn 
+
+# 7. Consultar estado de jugador 1
+ GET http://localhost:3000/player/1
+
+
+--------------------------Para el json al crear barcos
+
+{
+  "ships": [
+    { "type": "carrier", "positions": [[0,0],[0,1],[0,2],[0,3],[0,4]] },
+    { "type": "cruiser", "positions": [[2,0],[2,1],[2,2],[2,3]] },
+    { "type": "cruiser", "positions": [[4,0],[4,1],[4,2],[4,3]] },
+    { "type": "destroyer", "positions": [[6,0],[6,1],[6,2]] },
+    { "type": "destroyer", "positions": [[7,0],[7,1],[7,2]] },
+    { "type": "destroyer", "positions": [[8,0],[8,1],[8,2]] },
+    { "type": "submarine", "positions": [[0,6],[0,7]] },
+    { "type": "submarine", "positions": [[2,6],[2,7]] },
+    { "type": "submarine", "positions": [[4,6],[4,7]] },
+    { "type": "submarine", "positions": [[6,6],[6,7]] }
+  ]
+}
+
+
+---------------------------Ejemplo de turno
+
+{
+  "player": 2,
+  "attack": {
+    "x": 2,
+    "y": 0
+  }
+}
+
+------------
